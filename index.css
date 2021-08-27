@@ -1,0 +1,84 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 75rem;
+    background-color: #DCE1E3;
+    margin: 0 auto;
+}
+header{
+    flex:100%;
+    text-align: center;
+    background-color:#B73225;
+   }
+footer{
+    flex:100%;
+    margin-top: 5px;
+    border-top: 1px solid #5C5F58;
+}
+@media screen and (min-width:600px) {    
+main,nav{
+    flex:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+nav > a{
+    width: 120px;
+    margin:0 auto;/*középre helyez, elosztva egyenletesen a fennmaradó szabad helyet*/
+}                             
+}
+@media screen and (max-width:599px) {     
+    main,nav{
+        flex:100%;
+        display: flex;
+        flex-direction: column;
+       
+    }                            
+}
+nav{
+    padding:5px;
+    border: 1px solid #B73225;
+}
+nav a{
+    flex:auto;/*kitölti az összes rendelkezésre álló helyet*/
+    text-align: center;
+    padding:5px 1px;
+    background-color: #B73225;
+    border: 1px solid  white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+}
+section{
+    flex: 1 1 calc(33% - 6px);
+    padding: 2px;
+    margin-top: 3px;
+    border:1px solid white;
+    text-align: center;
+   /*azért kell, h az utolsó felx item-et a doboz aljára lehessen helyezni-*/
+   display: flex;
+   flex-flow: column wrap;/* a rövidebb formája a flex-direction és flex-wrap -nak*/
+}
+
+h1 {
+    color:white;
+}
+section>a{
+   margin-top: auto;/*az utolsó elem a doboz aljára kerül*/
+   margin-bottom: 5px;
+    text-decoration: none;
+    padding: 3px;
+    border:1px solid white;
+    border-radius: 25px;
+    width:50%;
+    align-self: center;
+}
+section>div{
+    border:1px solid white;
+    width: 100%;
+    display:flex;
+}
+img{
+    width: 100%;
+}
