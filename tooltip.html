@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* use for any tag on your page */
+    [data-title]:hover:after {
+        opacity: 1;
+        transition: all 0.1s ease 0.5s;
+        visibility: visible;
+    }
+
+    /* box for title text */
+    [data-title]:after {
+        content: attr(data-title);
+        /* position for title view box */
+        position: absolute;
+        bottom: -1.6em;
+        left: 100%;
+        z-index: 99999;
+        visibility: hidden;
+        /* optional */
+        white-space: nowrap;
+        /* stilization */
+        background-color: #00FF00;
+        color: #111;
+        font-size: 150%;
+        padding: 1px 5px 2px 5px;
+        box-shadow: 1px 1px 3px #222222;
+        opacity: 0;
+        border: 1px solid #111111;
+    }
+
+    [data-title] {
+        position: relative;
+    }
+</style>
+
+<body>
+    <a href="example.com" data-title="My site"> Link </a> with styled tooltip (bigger and with a different background
+    color,
+    as requested in the question)<br />
+    <a href="example.com" title="My site"> Link </a> with normal tooltip
+</body>
+
+</html>
