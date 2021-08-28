@@ -23,7 +23,7 @@ main,nav{
     flex-wrap: wrap;
     }
 nav > a{
-    width: 120px;
+    width: 150px;
     margin:0 auto;/*középre helyez, elosztva egyenletesen a fennmaradó szabad helyet*/
 }                             
 }
@@ -81,4 +81,10 @@ section>div{
 }
 img{
     width: 100%;
+}
+a[target="_blank"]:after{/*tesztelni: after helyett before*/
+    display:inline-block;
+    content:url(externallink.svg);
+    width: 15px;
+    height: 15px;
 }
