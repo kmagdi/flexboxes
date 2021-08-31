@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body{
+    background-color: #DCE1E3;
+}
+header{
+    position: relative;
+    height:120px;
+    
+   }
+h1{
+    color:#B73225!important;
+    font-family: 'Anton', sans-serif!important;
+}
+header::before{
+    content: '';
+    background-image: url(kep.jpg)  ;
+    background-size: contain;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    height: 120px;
+    z-index: -1;
+}
+footer{
+   
+    border-top: 1px solid #B73225;
+}
+
+nav{
+    padding:5px;
+    border-bottom: 1px solid #B73225;
+}
+nav>div{
+    background-color: #873225;
+    padding: 5px;
+    border-radius: 25px;
+    margin:1px
+}
+nav a{
+    
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+}
+section{
+    padding: 2px;
+    margin-top: 3px;
+    border:1px solid white;
+    text-align: center;
+  
+}
+
+
+section>a{
+   margin-top: auto;/*az utolsó elem a doboz aljára kerül*/
+   margin-bottom: 5px;
+    text-decoration: none;
+    padding: 3px;
+    border:1px solid #B73225;
+    border-radius: 25px;
+    width:50%;
+    align-self: center;
+    color:#B73225;
+    font-family: 'Anton', sans-serif;
+}
+section>div{
+    border:1px solid white;
+    
+}
+img{
+    width: 100%;
+}
+a[target="_blank"]:after{/*tesztelni: after helyett before*/
+    display:inline-block;
+    content:url(externallink.svg);
+    width: 15px;
+    height: 15px;
+    padding-left: 3px;
+}
+a:hover{
+    color:white
+}
