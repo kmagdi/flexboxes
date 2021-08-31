@@ -32,7 +32,7 @@ header::before{
 footer{
     flex:100%;
     margin-top: 5px;
-    border-top: 1px solid #5C5F58;
+    border-top: 1px solid #B73225;
 }
 @media screen and (min-width:600px) {    
 main,nav{
@@ -56,7 +56,7 @@ nav > a{
 }
 nav{
     padding:5px;
-    border: 1px solid #B73225;
+    border-bottom: 1px solid #B73225;
 }
 nav a{
     flex:auto;/*kitölti az összes rendelkezésre álló helyet*/
@@ -89,10 +89,12 @@ section>a{
    margin-bottom: 5px;
     text-decoration: none;
     padding: 3px;
-    border:1px solid white;
+    border:1px solid #B73225;
     border-radius: 25px;
     width:50%;
     align-self: center;
+    color:#B73225;
+    font-family: 'Anton', sans-serif;
 }
 section>div{
     border:1px solid white;
@@ -107,4 +109,5 @@ a[target="_blank"]:after{/*tesztelni: after helyett before*/
     content:url(externallink.svg);
     width: 15px;
     height: 15px;
+    padding-left: 2px;
 }
