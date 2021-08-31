@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body{
     display: flex;
     flex-wrap: wrap;
@@ -8,8 +9,26 @@ body{
 header{
     flex:100%;
     text-align: center;
-    background-color:#B73225;
+    position: relative;
+    height:120px;
+    
    }
+header h1{
+    color:#B73225;
+    font-family: 'Anton', sans-serif;
+}
+header::before{
+    content: '';
+    background-image: url(kep.jpg)  ;
+    background-size: contain;
+    position: absolute;
+    opacity: 0.3;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    height: 120px;
+    z-index: -1;
+}
 footer{
     flex:100%;
     margin-top: 5px;
@@ -23,7 +42,7 @@ main,nav{
     flex-wrap: wrap;
     }
 nav > a{
-    width: 150px;
+    width: 180px;
     margin:0 auto;/*középre helyez, elosztva egyenletesen a fennmaradó szabad helyet*/
 }                             
 }
@@ -45,6 +64,7 @@ nav a{
     padding:5px 1px;
     background-color: #B73225;
     border: 1px solid  white;
+    border-radius: 10px;
     font-size: 1.2rem;
     text-decoration: none;
     cursor:pointer;
